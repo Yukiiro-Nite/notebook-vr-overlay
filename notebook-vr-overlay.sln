@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "notebook-vr-overlay", "notebook-vr-overlay.vcxproj", "{A324B213-8EEB-4DF3-808A-6C0560A1DE57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A324B213-8EEB-4DF3-808A-6C0560A1DE57}.Debug|x64.ActiveCfg = Debug|x64
+		{A324B213-8EEB-4DF3-808A-6C0560A1DE57}.Debug|x64.Build.0 = Debug|x64
+		{A324B213-8EEB-4DF3-808A-6C0560A1DE57}.Debug|x86.ActiveCfg = Debug|Win32
+		{A324B213-8EEB-4DF3-808A-6C0560A1DE57}.Debug|x86.Build.0 = Debug|Win32
+		{A324B213-8EEB-4DF3-808A-6C0560A1DE57}.Release|x64.ActiveCfg = Release|x64
+		{A324B213-8EEB-4DF3-808A-6C0560A1DE57}.Release|x64.Build.0 = Release|x64
+		{A324B213-8EEB-4DF3-808A-6C0560A1DE57}.Release|x86.ActiveCfg = Release|Win32
+		{A324B213-8EEB-4DF3-808A-6C0560A1DE57}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3EEB93FA-B35A-4F28-9C43-F9FB761DD84B}
+	EndGlobalSection
+EndGlobal
