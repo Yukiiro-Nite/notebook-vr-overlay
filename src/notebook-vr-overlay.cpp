@@ -1,8 +1,9 @@
-// notebook-vr-overlay.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+#define _USE_MATH_DEFINES
 
 #include <iostream>
+#include <math.h>
 #include <openvr.h>
+#include "MathUtils.h"
 
 using namespace vr;
 
@@ -64,7 +65,7 @@ int main() {
 
 	VROverlay()->CreateOverlay(overlayKey, overlayName, &overlayHandle);
 	VROverlay()->SetOverlayColor(overlayHandle, 1.0, 1.0, 1.0);
-	VROverlay()->SetOverlayWidthInMeters(overlayHandle, 0.5f);
+	VROverlay()->SetOverlayWidthInMeters(overlayHandle, 0.25f);
 	VROverlay()->SetOverlayFromFile(overlayHandle, "C:/Users/ekazu/Pictures/gimp/gnome_space_4.png");
 	VROverlay()->ShowOverlay(overlayHandle);
 
@@ -72,11 +73,11 @@ int main() {
 	const HmdVector2_t imageSize = HmdVector2_t{ 500.0, 570.0 };
 	VROverlay()->SetOverlayMouseScale(overlayHandle, &imageSize);
 
-	HmdMatrix34_t transform;
-	ETrackingUniverseOrigin trackingOrigin = vr::TrackingUniverseStanding;
-	VROverlay()->GetOverlayTransformAbsolute(overlayHandle, &trackingOrigin, &transform);
+	HmdVector3_t pos = HmdVector3_t{0.125, 0, 0};
+	HmdVector3_t rot = HmdVector3_t{-M_PI / 2.0, 0, 0};
+	HmdMatrix34_t transform = MathUtils::matrix(pos, rot);
 
-	VROverlay()->SetOverlayTransformTrackedDeviceRelative(overlayHandle, 4, &transform);
+	VROverlay()->SetOverlayTransformTrackedDeviceRelative(overlayHandle, 3, &transform);
 
 	logTrackedDevices();
 
